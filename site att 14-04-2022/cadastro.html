@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenHouse - Cadastro</title>
+    <link rel="stylesheet" href="css/GreenHouse.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="shortcut icon" href="green.png">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="container">
+            <img class="imagemLogo" src="green.png">
+            <h1><a href="home.html">Green House</a></h1>
+
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="simulador.html">Simulador</a></li>
+                <li><a href="sobreproduto.html">Nossos Serviços</a></li>
+                <li><a href="sobrenos.html">Sobre nós</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a>|</a></li>
+                <li><a href="login.html">Login</a></li>
+                <div class="cadastroheader"><li><a href="cadastro.html">Cadastre-se</a></li></div>
+            </ul>
+        </div>
+    </div>
+    <!-- login  -->
+
+    <div class="main-cadastro">
+        <div class="left-cadastro">
+            <h1>Faça seu cadastro</h1>
+            <img src="banco_de_dados.svg" class="left-login-image" alt="banco animação">
+        </div>
+        <div class="right-cadastro">
+            <div class="card">
+                <div class="tamanho">
+                    <h3>Nome completo/Razão social: </h3>
+                    <input placeholder="Insira seu nome completo">
+                </div>
+                <div class="tamanho">
+                    <h3>Data de nascimento: </h3>
+                    <input class="fonteinput" placeholder="Insira sua data de nascimento" type="date">
+                </div>
+                <div class="tamanho">
+                    <h3>Tipo: </h3>
+                    <select class="cssselect" name="tipo" id="select_tipo" onchange="mostrar()">
+                        <option value="0">Selecione</option>
+                        <option value="1">CPF</option>
+                        <option value="2">CNPJ</option>
+                    </select>
+                </div>
+                <div class="tamanho" id="divescolha" style="display: none;">
+                    <h3>CPF / CNPJ: </h3>
+                    <input class="fonteinput" placeholder="Insira seu CPF ou CNPJ">
+                </div>
+                <div class="tamanho">
+                    <h3>CEP: </h3>
+                    <input class="fonteinput" placeholder="Insira seu CEP">
+                </div>
+                <div class="tamanho">
+                    <h3>Número: </h3>
+                    <input class="fonteinput" placeholder="Insira o número do endereço">
+                </div>
+                <div class="tamanho">
+                    <h3>Email:</h3>
+                    <input placeholder="Insira seu email">
+                </div>
+                <div class="tamanho">
+                    <h3>Senha:</h3>
+                    
+                        <input type="password" placeholder="Insira sua senha">
+
+                        
+                <br><br>
+                <button class="btn">Cadastrar</button><br><br>
+                
+               <div class="direct">Já é cadastrado? <br><a href="login.html"> Faça o Login</a></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+    
+function mostrar() {
+    var tipo = select_tipo.value
+
+    if (tipo == 1 ) {
+        divescolha.style.display = "block"
+    } 
+    else {
+        divescolha.style.display = "block"
+    }
+}
+
+</script>
+
+<!-- <li><a href="login.html"><button class="btnlogin" onclick="Login">Login</button></a></li> -->
